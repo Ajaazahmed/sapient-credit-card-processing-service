@@ -1,0 +1,39 @@
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: false
+    hibernate:
+      ddl: false
+  flyway:
+    placeholder-replacement: true
+    placeholder-prefix: '@{'
+    placeholder-suffix: '}'
+    
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    
+ALLOWED_ORIGIN: http://localhost:3000
+
+api:
+  version: 1.0
+  
+swagger:  
+  enabled: true
+  title: Credit Card Processing
+  description: Swagger Implementation for Publicis Sapient Test
+  useDefaultResponseMessages: false
+  enableUrlTemplating: false
+  deepLinking: true
+  defaultModelsExpandDepth: 1
+  defaultModelExpandDepth: 1
+  displayOperationId: false
+  displayRequestDuration: false
+  filter: false
+  maxDisplayedTags: 0
+  showExtensions: false
